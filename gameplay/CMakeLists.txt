@@ -172,7 +172,7 @@ elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 elseif (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     add_definitions(-DVK_USE_PLATFORM_MACOS_MVK)
     include_directories( 
-        $ENV{HOME}/vulkansdk-macos-1.0.69.0/macOS/include
+        $ENV{VULKAN_SDK}/include
     )
 endif()
 

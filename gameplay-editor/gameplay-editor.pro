@@ -105,13 +105,13 @@ linux {
 
 macx {
     DEFINES += VK_USE_PLATFORM_MACOS_MVK
-    INCLUDEPATH += $$(HOME)/vulkansdk-macos-1.0.69.0/macOS/include
+    INCLUDEPATH += $ENV{VULKAN_SDK}/include
     CONFIG(debug, debug|release): LIBS += -L$$PWD/../build/gameplay/Debug/ -lgameplay
     CONFIG(release, debug|release):LIBS += -L$$PWD/../build/gameplay/Release/ -lgameplay
     LIBS += -L$$PWD/../external-deps/lib/macos/x86_64/ -lgameplay-deps
     LIBS += -L$$PWD/../external-deps/lib/macos/x86_64/ -lgameplay-deps
     LIBS += -L/usr/lib -liconv
-    LIBS += -F$$(HOME)/vulkansdk-macos-1.0.69.0/MoltenVK/macOS -framework MoltenVK
+    LIBS += -F$ENV{VULKAN_SDK}/../MoltenVK/macOS -framework MoltenVK
     LIBS += -F/System/Library/Frameworks -framework Metal
     LIBS += -F/System/Library/Frameworks -framework MetalKit
     LIBS += -F/System/Library/Frameworks -framework GameKit
